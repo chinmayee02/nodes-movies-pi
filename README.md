@@ -23,7 +23,7 @@ Axios
 Setup Instructions
 
 ## Step 1: Clone the Repository
-- git clone https://github.com/your-username/nodejs-movies-api.git
+- git clone https://github.com/chinmayee02/nodes-movies-pi
 - cd nodejs-movies-api
 
 ## Step 2: Install Dependencies
