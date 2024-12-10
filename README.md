@@ -1,10 +1,10 @@
 NodeJS Movies API
 
-Overview
+# Overview
 
 This is a Node.js project that provides an API to fetch movies for a specific year, sorted by popularity, and includes optional details about the movie editors. The service integrates with the TMDB API and is designed to handle failures gracefully when fetching editor details.
 
-Features
+# Features
 
 Fetch movies for a given year, sorted by descending popularity.
 Include editor details (retrieved via the Movie Credits API) in the response.
@@ -16,39 +16,42 @@ Node.js: Version 21 or higher
 npm: Version 8 or higher
 TMDB API v4 Bearer Token (Sign up for an API key here)
 Dependencies:
-TypeScript
+TypeScripta
 Express
 Jest
 Axios
 Setup Instructions
 
-Step 1: Clone the Repository
-git clone https://github.com/your-username/nodejs-movies-api.git
-cd nodejs-movies-api
+## Step 1: Clone the Repository
+- git clone https://github.com/your-username/nodejs-movies-api.git
+- cd nodejs-movies-api
 
-Step 2: Install Dependencies
+## Step 2: Install Dependencies
 Run the following command to install all project dependencies:
 
-npm install
+- npm install
 
 
-Step 3: Configure Environment Variables
-Create a .env file in the root directory and add your TMDB v4 Bearer Token:
+## Step 3: Configure Environment Variables
+- Create a .env file in the root directory and add your TMDB v4 Bearer Token:
 
 TMDB_API_KEY=your_tmdb_v4_bearer_token
 Replace your_tmdb_v4_bearer_token with your actual API key.
 
-Step 4: Compile TypeScript
+## Step 4: Compile TypeScript
 Compile the TypeScript code to JavaScript:
 
-npx tsc
-Step 5: Start the Server
+- npx tsc
+
+
+## Step 5: Start the Server
 Start the server by running:
 
-node dist/index.js
+- node dist/index.js
+
 The server will start at http://localhost:3000.
 
-API Endpoints
+# API Endpoints
 
 1. Fetch Movies
 URL: GET /api/movies
@@ -77,12 +80,13 @@ Example Response:
     "editors": []
   }
 ]
-Testing the Project
+
+# Testing the Project
 
 Run Unit Tests
 Run the following command to execute unit tests:
 
-npm test
+- npm test
 Expected Output:
 PASS  tests/movies.test.ts
   ✓ should fetch movies for a given year (xx ms)
@@ -93,29 +97,11 @@ Tests:       2 passed, 2 total
 Snapshots:   0 total
 Development Workflow
 
-Project Structure
 
-nodejs-movies-api/
-├── src/
-│   ├── index.ts         # Entry point for the application
-│   ├── routes.ts        # API routes
-│   ├── controllers/
-│   │   ├── movies.ts    # Controller for movies endpoint
-│   │   └── editors.ts   # Controller for editors endpoint
-│   ├── services/
-│   │   ├── movies.ts    # Service for fetching movies
-│   │   └── editors.ts   # Service for fetching editors
-│   ├── types/           # Type definitions
-│   └── utils/           # Utility functions
-├── tests/               # Unit tests
-├── dist/                # Compiled JavaScript files (after build)
-├── package.json         # Project metadata and dependencies
-├── tsconfig.json        # TypeScript configuration
-└── .env                 # Environment variables (API key)
-Error Handling
+# Error Handling
 
 If the Movie Credits API fails, the editors field in the response will be an empty array, ensuring the service does not fail entirely.
 Invalid requests (e.g., missing year parameter) will return a 400 Bad Request response with an appropriate error message.
-Contact
+
 
 This README file provides all the necessary details to understand, set up, and run the project. Let me know if you need any additional tweaks!
