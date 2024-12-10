@@ -87,7 +87,8 @@ Run Unit Tests
 Run the following command to execute unit tests:
 
 - npm test
-Expected Output:
+
+- Expected Output:
 PASS  tests/movies.test.ts
   ✓ should fetch movies for a given year (xx ms)
   ✓ should fetch editors for a movie (xx ms)
